@@ -1,0 +1,76 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+h1 {
+    margin: 2rem 0;
+}
+
+img {
+    height: auto;
+    width: 300px;
+    margin-bottom: 2rem;
+}
+
+a {
+    color: #0070BB;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+section h2 {
+    margin-bottom: 1rem;
+}
+
+footer {
+    margin: 5rem auto;
+}
+
+.container {
+    max-width: 650px;
+    margin: 0 auto;
+    padding: 1rem 2rem;
+}
+
+
+/* Home page | index.html */
+
+.list {
+    list-style: none;
+}
+
+.list-item {
+    margin-bottom: 0.5rem;
+    border-bottom: 1px solid #E5E4E2;
+    padding: 0.5rem 0;
+}
+
+/* Recipe page */
+
+.ingredients,
+.description {
+    margin-bottom: 2rem;
+}
+
+.steps {
+    counter-reset: section;
+    /* Initialize the counter */
+}
+
+.steps .list-item {
+    margin-bottom: 1rem;
+}
+
+.steps .list-item::before {
+    content: counter(section) ": ";
+    font-weight: bold;
+    counter-increment: section;
+}
